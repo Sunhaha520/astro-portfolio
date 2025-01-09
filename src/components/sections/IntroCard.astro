@@ -2,20 +2,18 @@
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { LINKS } from '../../lib/constants'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Linkedin, Github, Mail , Globe} from 'lucide-react'
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
   <div class="flex h-full w-full">
     <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col">
-        <h6 class="m-0 text-sm font-light text-gray-500">welcome</h6>
+        <h6 class="m-0 text-sm font-light text-gray-500"></h6>
         <p class="m-0 text-xl font-light">
-          Hi, I'm <b class="font-bold">Andrés Camilo Plaza</b>, a software
-          developer, systems engineer and tattoo artist with strong focus on the
-          user experience, animations and micro interactions. I love to create
-          beautiful and functional interfaces, I am passionate about technology
-          and I am always looking for new challenges.
+          Hi，我是<b class="font-bold">可乐君</b>，英文名Derek，天坑土木跑路人，跑路多年，从未成功。
+          爱好写代码，旅行，绘画，天文，摄影，电影和数码；偶尔在145.5MHz上发射信号。目前在澳门大学读研。
+          与黄满安教授从事先进技术运用于工程领域的研究。
         </p>
       </div>
       <div class="flex gap-4">
@@ -37,14 +35,20 @@ import { Linkedin, Github, Mail } from 'lucide-react'
             <span class="sr-only">Email contact</span>
           </Button>
         </a>
+        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
+          <Button>
+            <Globe />
+            <span class="sr-only">博客</span>
+          </Button>
+        </a>
       </div>
     </div>
     <img
       width="300"
       height="300"
-      src="/me.png"
+      src="/me.webp"
       class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
-      alt="memoji of andres plaza"
+      alt=""
     />
   </div>
 </Card>

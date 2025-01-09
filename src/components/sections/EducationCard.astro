@@ -1,0 +1,25 @@
+---
+import Card from '../Card.astro'
+import { EDUCATION } from '../../lib/constants'
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="教育经历">
+</br>
+  <div class="mt-2 space-y-4">
+    {
+      EDUCATION.map((edu) => (
+        <div class="flex items-start space-x-3">
+          <img src={edu.logo} class="w-12 h-12 object-contain" />
+          <div>
+            <a href={edu.link} target="_blank" rel="noopener noreferrer" 
+               class="text-lg font-semibold hover:text-primary transition-colors">
+              {edu.school}
+            </a>
+            <p class="text-sm">{edu.major} · {edu.degree}</p>
+            <p class="text-sm">{edu.period}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</Card>
