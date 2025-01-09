@@ -1,25 +1,35 @@
 ---
-import { Card as ShadcnCard } from '../ui/card'
+import Card from '../Card.astro'
+import { Badge } from '../ui/badge'
+
+const GAMES = [
+  {
+    name: "我的世界",
+    platform: "PC/Mobile",
+    link: "https://www.minecraft.net/"
+  }
+]
 ---
 
-<ShadcnCard
-  className="card-animate transform-y-[-40%] align-start perspective-1200 group relative col-span-1 md:col-span-1 row-span-1 md:row-span-2 h-[185px] md:h-[199px] w-full flex-none transform justify-start overflow-hidden transition duration-75 ease-in-out p-0 rounded-xl shadow-lg"
->
-  <a 
-    href="https://www.minecraft.net" 
-    target="_blank" 
-    rel="noreferrer" 
-    class="block h-full w-full group"
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="爱好游戏">
+  <div 
+    class="absolute inset-0 z-[-1] opacity-30 bg-cover bg-center transition-transform duration-300 ease-in-out hover:scale-110" 
+    style="background-image: url('/mc.webp');"
   >
-    <div class="absolute inset-0 z-10 bg-[url('/mc.webp')] bg-center bg-cover bg-no-repeat transition-all duration-300 ease-in-out transform group-hover:scale-105"></div>
-    
-    <div class="absolute top-0 left-0 right-0 z-20 p-4">
-      <div class="flex w-full items-start justify-between">
-        <div class="flex flex-col">
-          <h2 class="text-white drop-shadow-md">爱好游戏</h2>
-          <span class="text-xs text-gray-200 drop-shadow-md">Minecraft</span>
-        </div>
-      </div>
+  </div>
+  
+  <div class="mt-2 flex w-full flex-col items-center justify-center gap-4">
+    <h3 class="text-xl font-bold text-[rgb(249,115,22)]">我最爱的游戏</h3>
+    <div class="flex flex-wrap items-center justify-center gap-2">
+      {
+        GAMES.map((game) => (
+          <a href={game.link} target="_blank" rel="noopener noreferrer">
+            <Badge variant="outline" >
+              {game.name} - {game.platform}
+            </Badge>
+          </a>
+        ))
+      }
     </div>
-  </a>
-</ShadcnCard>
+  </div>
+</Card>

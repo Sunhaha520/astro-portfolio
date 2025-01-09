@@ -1,33 +1,69 @@
 ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
+import { Linkedin, Github, Mail, Globe, Twitter, Laptop, GraduationCap} from 'lucide-react'
+import { Badge } from '../ui/badge'
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
   <div class="h-full">
     <header class="flex items-center">
       <h1 class="text-xl font-bold text-foreground">
-        Let's start working together!
+        随时找到我！
       </h1>
     </header>
     <address class="mt-4 flex flex-col">
-      <h2 class="text-gray-500">Contact Details</h2>
-      <p>camiloplaza3@gmail.com</p>
-      <p>🇨🇴 Bogotá D.C, Colombia 🇨🇴</p>
+      <h2 class="text-gray-500">联系方式</h2>
+      <p>dereksunmo@163.com</p>
+      <p>期待与您联络😊</p>
     </address>
-    <div class="mt-4 flex w-fit flex-col">
-      <h2 class="text-gray-500">Socials</h2>
-      <ul>
+
+    <div class="mt-4 w-full">
+      <h2 class="text-gray-500 mb-2">其他社交平台</h2>
+      <ul class="grid grid-cols-1 gap-2">
         <li>
-          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
+          <a href={LINKS.linkedin} target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <Linkedin size={20} /> 领英
+            </Badge>
+          </a>
         </li>
         <li>
-          <a href={LINKS.github} target="_blank">Github</a>
+          <a href={LINKS.github} target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <Github size={20} /> Github
+            </Badge>
+          </a>
         </li>
         <li>
-          <a href={LINKS.instagram} target="_blank">Instagram</a>
+          <a href="https://blog.kelejun.cn" target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <Globe size={20} /> 博客
+            </Badge>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/DerekSunZY" target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <Twitter size={20} /> 推特
+            </Badge>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.kelejun.cn" target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <Laptop size={20} /> 网站
+            </Badge>
+          </a>
+        </li>
+        <li>
+          <a href="https://lab.kelejun.cn" target="_blank" class="block">
+            <Badge variant="outline" className="w-full flex justify-center items-center gap-2 hover:border-[#f97316] p-2 text-lg">
+              <GraduationCap size={20} /> 学术站
+            </Badge>
+          </a>
         </li>
       </ul>
-    </div>
+    </div>  
   </div>
 </Card>

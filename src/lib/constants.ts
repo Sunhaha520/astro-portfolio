@@ -26,20 +26,17 @@ export const EDUCATION = [
 ];
 
 export const LINKS = {
-  github: 'https://github.com/bue221',
-  linkedin: 'https://www.linkedin.com/in/bue221/',
-  mail: 'mailto:camiloplaza3@gmail.com',
-  instagram: 'https://www.instagram.com/caj_ink/',
-  medium: 'https://ladvace.medium.com/',
-  discord: 'https://discordapp.com/users/163300027618295808',
+  github: 'https://github.com/sunhaha520',
+  linkedin: 'https://www.linkedin.com/in/dereksunmo',
+  mail: 'mailto:dereksunmo@163.com',
 }
 
 // Global
 export const SITE: Site = {
-  TITLE: 'Astro Sphere',
+  TITLE: '可乐君的主页',
   DESCRIPTION:
-    'Welcome to Astro Sphere, a portfolio and blog for designers and developers.',
-  AUTHOR: 'Mark Horn',
+    '欢迎来到可乐君的主页',
+  AUTHOR: '可乐君',
 }
 
 // Work Page
